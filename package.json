@@ -1,0 +1,30 @@
+{
+  "name": "indie-arch",
+  "version": "1.0.0",
+  "author": "Bogdan Kolesnyk",
+  "keywords": [],
+  "description": "",
+  "license": "MIT",
+  "packageManager": "pnpm@9.4.0",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "prepare": "turbo prepare",
+    "docker:up": "docker compose -f infra/docker/docker-compose.yaml up -d",
+    "docker:down": "docker compose -f infra/docker/docker-compose.yaml down",
+    "dev": "turbo dev",
+    "qc": "turbo qc",
+    "fix": "turbo fix",
+    "build": "turbo build",
+    "app:api": "pnpm --filter @indie-arch/api",
+    "lib:meilisearch": "pnpm --filter @indie-arch/meilisearch",
+    "lib:typesense": "pnpm --filter @indie-arch/typesense",
+    "ncu": "ncu -u --deep --doctor --doctorTest \"pnpm qc\""
+  },
+  "devDependencies": {
+    "@turbo/gen": "2.0.5",
+    "npm-check-updates": "16.14.20",
+    "turbo": "2.0.5"
+  }
+}

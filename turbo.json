@@ -1,0 +1,35 @@
+{
+"$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "prepare": {
+      "dependsOn": ["build"],
+      "outputs": ["dist/**"],
+      "outputLogs": "new-only"
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "qc": {
+      "dependsOn": ["^build"],
+      "outputLogs": "new-only"
+    },
+    "fix": {
+      "dependsOn": ["^build"],
+      "outputLogs": "new-only"
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+      "outputLogs": "new-only"
+    },
+    "release": {
+      "dependsOn": ["^release"],
+      "outputLogs": "new-only"
+    },
+    "deploy": {
+      "dependsOn": ["^deploy"],
+      "outputLogs": "new-only"
+    }
+  }
+}

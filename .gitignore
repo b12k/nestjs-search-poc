@@ -1,0 +1,9 @@
+.vscode
+.idea
+.turbo
+
+node_modules
+dist
+infra/docker/data
+
+*.log
