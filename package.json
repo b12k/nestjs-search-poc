@@ -20,7 +20,7 @@
     "app:api": "pnpm --filter @indie-arch/api",
     "lib:meilisearch": "pnpm --filter @indie-arch/meilisearch",
     "lib:typesense": "pnpm --filter @indie-arch/typesense",
-    "ncu": "ncu -u --deep --doctor --doctorTest \"pnpm qc\""
+    "ncu": "turbo ncu"
   },
   "devDependencies": {
     "@turbo/gen": "2.0.5",
