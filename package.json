@@ -17,14 +17,13 @@
     "qc": "turbo qc",
     "fix": "turbo fix",
     "build": "turbo build",
+    "ncu": "turbo ncu",
     "app:api": "pnpm --filter @indie-arch/api",
     "lib:meilisearch": "pnpm --filter @indie-arch/meilisearch",
-    "lib:typesense": "pnpm --filter @indie-arch/typesense",
-    "ncu": "turbo ncu"
+    "lib:typesense": "pnpm --filter @indie-arch/typesense"
   },
   "devDependencies": {
     "@turbo/gen": "2.0.5",
-    "npm-check-updates": "16.14.20",
     "turbo": "2.0.5"
   }
 }

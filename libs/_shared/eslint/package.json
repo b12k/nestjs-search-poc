@@ -1,0 +1,10 @@
+{
+  "name": "@indie-arch/eslint",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Eslint Config",
+  "license": "MIT",
+  "main": "esl",
+  "scripts": {
+  }
+}
