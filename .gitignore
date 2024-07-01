@@ -4,6 +4,8 @@
 
 node_modules
 dist
-infra/docker/data
+misc/docker/data
+
+.env
 
 *.log

@@ -3,14 +3,14 @@ services:
     image: getmeili/meilisearch:v1.8
     restart: always
     ports:
-      - 7700:7700
+      - ${MEILISEARCH_PORT}:7700
     volumes:
       - ./data/meilisearch:/meili_data
   typesense:
     image: typesense/typesense:26.0
     restart: always
     ports:
-      - 8108:8108
+      - ${TYPESENSE_PORT}:8108
     volumes:
       - ./data/typesense:/data
     command: '--data-dir /data --api-key=xyz --enable-cors'
@@ -18,7 +18,7 @@ services:
     image: postgres
     restart: always
     ports:
-      - 5432:5432
+      - ${POSTGRES_PORT}:5432
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: secret
@@ -28,7 +28,7 @@ services:
     image: redis:alpine
     restart: always
     ports:
-      - 6379:6379
+      - ${REDIS_PORT}:6379
     command: redis-server --requirepass secret
     volumes:
       - ./data/redis:/data
