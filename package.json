@@ -13,7 +13,7 @@
     "prepare": "run-p prepare:*",
     "prepare:workspaces": "turbo prepare",
     "prepare:husky": "husky",
-    "prepare:docker-env": "cp -u misc/docker/.env.example misc/docker/.env",
+    "prepare:docker-env": "shx cp -u misc/docker/.env.example misc/docker/.env",
     "docker:up": "docker compose --env-file misc/docker/.env -f misc/docker/docker-compose.yaml up -d",
     "docker:down": "docker compose -f misc/docker/docker-compose.yaml down",
     "dev": "turbo dev",
